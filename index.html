@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Nome do Corretor] - Corretor de Imóveis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        
+        header nav ul li {
+            margin: 0 15px;
+        }
+        
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        #hero {
+            background-image: url('imovel-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #hero .hero-content {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        
+        section {
+            padding: 20px;
+        }
+        
+        .carrossel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 10px;
+        }
+        
+        .carrossel .item {
+            min-width: 300px;
+            flex: none;
+            scroll-snap-align: center;
+            text-align: center;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .carrossel .item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        #contato {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        #contato label {
+            display: block;
+            margin-top: 10px;
+        }
+        
+        #contato input, #contato textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+        
+        #contato button {
+            background-color: #f4511e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        
+        #contato button:hover {
+            background-color: #e94e0f;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>[Nome do Corretor]</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#imoveis">Imóveis</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Encontre o imóvel dos seus sonhos!</h2>
+            <p>Experiência e confiança no mercado imobiliário.</p>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Eu sou [Nome do Corretor], um corretor de imóveis com [número de anos] de experiência ajudando clientes a encontrar os melhores imóveis. Trabalho com dedicação e honestidade para garantir a satisfação de cada cliente.</p>
+    </section>
+
+    <section id="imoveis">
+        <h2>Imóveis Disponíveis</h2>
+        <div class="carrossel">
+            <div class="item">
+                <img src="imovel1.jpg" alt="Imóvel 1">
+                <h3>Casa no Jardim das Flores</h3>
+                <p>3 quartos, 2 banheiros, piscina</p>
+            </div>
+            <div class="item">
+                <img src="imovel2.jpg" alt="Imóvel 2">
+                <h3>Apartamento no Centro</h3>
+                <p>2 quartos, 1 banheiro, garagem</p>
+            </div>
+            <div class="item">
+                <img src="imovel3.jpg" alt="Imóvel 3">
+                <h3>Sobrado no Alto da Colina</h3>
+                <p>4 quartos, 3 banheiros, vista panorâmica</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <h2>Depoimentos</h2>
+        <blockquote>"O [Nome do Corretor] me ajudou a encontrar a casa dos meus sonhos com muita paciência e profissionalismo!" - Cliente Satisfeito</blockquote>
+        <blockquote>"A venda do meu imóvel foi rápida e tranquila graças à expertise do [Nome do Corretor]." - Cliente Vendedor</blockquote>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contato-form">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Nome do Corretor] - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Exemplo de funcionalidade básica para submissão de formulário
+document.getElementById('contato-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Obrigado por entrar em contato, retornaremos em breve!');
+});
+
+    </script>
+    
+</body>
+</html>
